@@ -1,11 +1,9 @@
 language: swift
 osx_image: xcode12.2
 
-services:
-  - docker
-
 before_install:
- - docker run -d -p 9999:8080 -v $PWD/Vendor:/home/wiremock rodolpheche/wiremock
+ - echo $PWD
+ - java -jar Vendor/wiremock-standalone-2.23.2.jar --port 9999 --verbose
  - gem install fastlane --no-document
 
 install: true
