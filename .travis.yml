@@ -3,7 +3,7 @@ osx_image: xcode12.2
 
 before_install:
  - echo $PWD
- - java -jar Vendor/wiremock-standalone-2.23.2.jar --port 9999 --verbose
+ - java -jar Vendor/wiremock-standalone-2.23.2.jar --port 9999 &
  - gem install fastlane --no-document
 
 install: true
