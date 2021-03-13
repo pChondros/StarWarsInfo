@@ -4,8 +4,6 @@ osx_image: xcode12.2
 before_install:
  - echo $PWD
  - java -jar Vendor/wiremock-standalone-2.23.2.jar --port 9999 --root-dir Vendor &
- - curl http://localhost:9999/swapi.co/api/people
- - curl http://localhost:8080/__admin 
  - gem install fastlane --no-document
 
 install: true
