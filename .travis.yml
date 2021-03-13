@@ -7,6 +7,8 @@ services:
 before_install:
  - docker run -d -p 9999:8080 -v $PWD/Vendor:/home/wiremock rodolpheche/wiremock
  - gem install fastlane --no-document
+
 install: true
+
 script:
  - fastlane scan --scheme StarWarsInfoUITests -d 'platform=iOS Simulator,name=iPhone 12,OS=14.2' 
